@@ -18,6 +18,8 @@ export const ProductCard = ({ product }: ProductCardProps) => {
         src={imageUrl}
         alt={product.productName}
         className="w-full h-48 object-contain mb-4"
+        loading="lazy"
+        decoding="async"
       />
       <h3 className="text-lg font-semibold flex-grow">{product.productName}</h3>
       <p className="text-xl font-bold text-gray-900 mt-2">{product.price}</p>
