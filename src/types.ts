@@ -6,3 +6,4 @@ export interface Product {
   productName: string;
   type: "Beer" | "Wine" | "Spirits" | "Cider";
 }
+export const PRODUCT_TYPES = ["Beer", "Wine", "Spirits", "Cider"] as const;
