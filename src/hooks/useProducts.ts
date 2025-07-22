@@ -7,11 +7,9 @@ export const useProducts = () => {
   const [productTypeFilter, setProductTypeFilter] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
 
-  const filteredProducts = filterProducts(
-    products,
-    productTypeFilter,
-    searchTerm
-  );
+  const filteredProducts = useMemo(() => {
+    return filterProducts(products, productTypeFilter, searchTerm);
+  }, [products, productTypeFilter, searchTerm]);
 
   return {
     filteredProducts,
