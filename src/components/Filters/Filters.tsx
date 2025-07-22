@@ -13,6 +13,7 @@ export const Filters = ({ onFilterChange, onSearchChange }: FiltersProps) => {
         placeholder="Search ..."
         className="border rounded-md p-2 mr-4"
         onChange={(e) => onSearchChange(e.target.value)}
+        data-test-id="search-input"
       />
       <select
         className="border rounded-md p-2"
