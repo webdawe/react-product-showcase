@@ -7,9 +7,7 @@ import { useState } from "react";
 import { ProductList } from "./components/ProductList/ProductList";
 import { Filters } from "./components/Filters/Filters";
 const App = () => {
-  const [products, setProducts] = useState<Product[]>(
-    productsData as Product[]
-  );
+  const products: Product[] = productsData as Product[];
   const [productTypeFilter, setProductTypeFilter] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
 
