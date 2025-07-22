@@ -8,7 +8,12 @@ export const ProductCard = ({ product }: ProductCardProps) => {
   const imageUrl = `/images/products/${product.productImage}`;
 
   return (
-    <div className="bg-white border rounded-lg shadow-md p-4 flex flex-col text-center">
+    <div className=" relative bg-white border rounded-lg shadow-md p-4 flex flex-col text-center">
+      {product.isSale && (
+        <div className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+          Sale
+        </div>
+      )}
       <img
         src={imageUrl}
         alt={product.productName}
